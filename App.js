@@ -1,3 +1,4 @@
+
 /**
  * <div id="parent">
  *    <div id="child1">
@@ -8,9 +9,9 @@
  *       <h1>I am an h1 tag</h1>
  *       <h2>I am an h2 tag</h2>
  *    </div>
- * </div>
+ * </div> 
  */
-// React can also be written without JSX
+// React can also be written without JSX, but it is quite inconvinient.
 const parent = React.createElement("div",{id:"parent"},
     [React.createElement("div",{id:"child1"},
     [React.createElement("h1",{},"I am an h1 tag"),
@@ -25,9 +26,8 @@ const parent = React.createElement("div",{id:"parent"},
 
 
 // heading is react element, which is JS object.
-const heading = React.createElement("h1",{id: "heading"},"Hello World from React!");
+const heading = React.createElement("h1",{id: "heading"},"Hello World!   from React!");
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parent);
-console.log(parent)
+root.render(parent);// takes JS object,convert to 'h1' HTML element and put it up on the DOM
