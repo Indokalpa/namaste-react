@@ -7,20 +7,14 @@
     <title>Namaste React</title>
 </head>
 <body> 
-    <h1>Before root</h1>
-    <!--original data is replaced on render, not append-->
-    <!--react will work on 'root' portion, so it's a library,not a frameWork -->
-    <div id="root">
-        <h1>Akshay is here</h1>
-        <h1>Lala is here</h1>
+    <h1>Before the root 🛫</h1>
+    <div id="root" class="root">
+        <h1>Akshay is here 🤡</h1>
     </div>
-    <h1>After root</h1>
-    <!--CDN react files should come first as we are using it in App.js-->
-    <!--JS file is executed top to down-->
-
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react- dom@18/umd/react-dom.development.js"></script>
-
-   <script src="./App.js"></script>
+    <h1>After the root 🛬</h1>
+    <!--Normal Javascript files can't have imports and exports-->
+    <!--Parcel is also doing HMR: Hot module replacement i.e. refreshing by File watching algorithm-->
+    <!--remove main:"App.js" from package.json while using npx parcel build index.html, esle it create conflicts-->
+   <script type="module" src="./App.js"></script>
 </body>
 </html>  
